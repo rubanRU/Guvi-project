@@ -1,0 +1,164 @@
+
+
+<html>    
+    <head>
+
+        <script type="text/javascript">
+
+            function ted(){
+                var exp2="^[0-9]*$";
+                var s=document.f1.id.value;
+                var x=document.f1.pass.value;
+                if(s ==""){
+                    alert("PLEASE ENTER THE ID NUMBER") ;
+                    f1.id.focus();
+                    return false;
+                }
+                if(s.search(exp2)==-1)
+                {
+                   alert("Only numbers");
+                    f1.id.focus();
+                   return false;
+   }
+                if(x==""){
+                    alert("PLEASE ENTER THE PASSWORD") ;
+                     f1.pass.focus();
+                    return false;
+                }
+
+                return true;
+            }
+        </script>
+<script src="jquery-1.11.3.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("input").focus(function(){
+        $(this).css("background-color", "pink");
+    });
+    $("input").blur(function(){
+        $(this).css("background-color", "white");
+    });
+});
+</script>
+    </head>
+
+      <style>
+ul
+{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color:lightskyblue;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 16px 18px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: blue;
+}
+
+.active {
+    background-color: darkslateblue;
+}
+            .line
+            {
+
+            border: 1px solid black;
+            margin-top: 50px;
+            margin-bottom:0px;
+            margin-right: 0px;
+            margin-left: 1040px;
+            background-image:url(hospital.jpg);
+            line-height: 0.8;
+            background-size:cover;
+            }
+            input.submit
+            {
+            font-size:22px;
+            line-height: 0.8;
+
+            }
+            input.click
+            {
+            line-height: 1.8;
+            }
+            form
+            {
+            color: red;
+            font-size: 25px;
+
+            }
+
+            h1
+            {
+            text-align: center;
+
+            }
+            h2
+            {
+            text-align: center;
+
+            }
+  
+           body
+           {
+
+            background-image:url(lap.png);
+            background-size:2100px 1300px;
+           
+           }
+
+     </style>
+
+
+
+    <body>
+       
+<ul>
+  <li><a class="active" href="http://localhost:8080/minip/fr.html">Home</a></li>
+  <li><a  href="kri.html">News</a></li>
+  <li><a href="kri1.html">Contact</a></li>
+  <li><a href="kri2.html">About</a></li>
+</ul>
+
+        <h1> <font size=9>
+            HOSPITAL INFORMATION SYSTEM
+        </h1></font> </br>
+
+
+        <marquee style="border:blue 5px SOLID"><font size=6>
+            WELCOME TO INFORMATION TECHNOLOGY</font>
+            </marquee>
+        <div class="line">
+           <h1>
+               LOGIN
+               </h1>
+
+      <form name="f1" action="RDemo2" method="get" onsubmit="return ted();">
+      <pre>
+<strong>
+  ID NUMBER  <input type="text" name="id" value="" size="34" /><br/>
+  PASSWORD   <input type="password" name="pass" value="" size="34" /><br/>
+  </strong>
+             <input type="submit"value="SIGN" class="submit" />
+       </form>
+             <form  name="f2" action="mini2.jsp" >
+   <input type="submit" value="SIGN UP" align="right"class="click"/>
+        </form>
+        </div>
+    </pre>
+
+          
+        </body>
+</html>

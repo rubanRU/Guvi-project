@@ -1,0 +1,70 @@
+<html>
+<head>
+    <style>
+         input.submit
+            {
+                 font-size:22px;
+}
+body{
+    background-image: url("poo.jpg");
+
+}
+        div{
+
+            text-align: center;
+}
+        h1{
+            text-align:center;
+
+}
+div{
+    text-align: center;
+}
+input.kk{
+    text-align: center;
+}
+
+
+
+    </style>
+ <script type="text/javascript">
+
+  function test(str)
+  {
+   var ob=new XMLHttpRequest();
+
+   ob.onreadystatechange=function ss()
+   {
+    if(ob.readyState==4)
+    {
+        document.getElementById("s1").innerHTML=ob.responseText;
+    }
+   }
+
+   ob.open("GET","c?msg="+str,true);
+   ob.send();
+  }
+
+ </script>
+
+</head>
+ <body>
+
+     <h1>
+         MEDICINE INFORMATION SYSTEM
+     </h1>
+
+  <form name="f1"  action="" class="kk">
+     MEDICINE SEARCH:   <input type="text" name="user" onkeyup="test(this.value);" />
+
+  </form>
+     <form action="wec.html" class="submit">
+         <input type="submit" value="NEXT"/>
+
+     </form>
+
+     <div id="s1">
+
+     </div>
+ </body>
+</html>
